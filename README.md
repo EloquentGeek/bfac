@@ -4,4 +4,10 @@ A practical guide to Bevy Engine game development that assumes no previous gamed
 
 ## Reading
 
-You can read this book online [here](https://bfac.eloquentgeek.games).
+You can read this book online [here](https://bfac.eloquentgeek.games). Alternatively, you can run a
+local copy with [`zola`](https://www.getzola.org/documentation/getting-started/installation/) by
+cloning this repo and:
+
+```shell
+zola serve
+```

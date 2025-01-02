@@ -1,6 +1,6 @@
 +++
 title = "Introduction"
-description = "<em>So there's this Bevy thing that can move pixels around on the screen...</em>"
+description = "So there's this Bevy thing that can move pixels around on the screen..."
 date = 2025-01-02
 updated = 2025-01-02
 draft = false
@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = "So there's this Bevy thing that can move pixels around on the screen..."
+lead = "<em>So there's this Bevy thing that can move pixels around on the screen...</em>"
 toc = true
 top = false
 +++

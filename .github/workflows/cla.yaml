@@ -29,9 +29,8 @@ jobs:
           path-to-document: 'https://raw.githubusercontent.com/EloquentGeek/bfac/refs/heads/main/CLA.md'
           # branch should not be protected
           branch: 'main'
-          # allowlist: bas-ie
-          allowlist: ''
-          custom-notsigned-prcomment: "Thanks for your submission to Bevy For the Aged and Confused! To preserve the ability to publish new editions of this book in the future, we ask that all new contributors sign the [Contributor License Agreement](https://raw.githubusercontent.com/EloquentGeek/bfac/refs/heads/main/CLA.md) before we can accept your contribution. It's just a version of [the Apache Foundation ICLA](https://www.apache.org/licenses/icla.pdf), a well-known standard CLA used by open source projects. You can read more about this process in the [Contributing](content/book/contributing/how-to-contribute.md) section of the book itself.\n\nTo indicate your agreement, please enter the following in a comment on this PR:"
+          allowlist: bas-ie
+          custom-notsigned-prcomment: "Thanks for your submission to _Bevy For the Aged and Confused_! To preserve the ability to publish new editions of this book in the future, we ask that all new contributors sign the [Contributor License Agreement](https://raw.githubusercontent.com/EloquentGeek/bfac/refs/heads/main/CLA.md) before we can accept your contribution. It's just a version of [the Apache Foundation ICLA](https://www.apache.org/licenses/icla.pdf), a well-known standard CLA used by open source projects. You can read more about this process in the [Contributing](content/book/contributing/how-to-contribute.md) section of the book itself.\n\nTo indicate your agreement, please enter the following in a comment on this PR:"
           custom-pr-sign-comment: 'I have read the CLA Document and I hereby sign the CLA.'
 
          # the followings are the optional inputs - If the optional inputs are not given, then default values will be taken

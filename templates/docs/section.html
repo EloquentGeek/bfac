@@ -1,0 +1,41 @@
+{% extends "section.html" %}
+
+{% block body %}
+  {% set page_class = "docs list" %}
+{% endblock body %}
+
+{% block header %}
+  {{ macros_header::header(current_section=current_section)}}
+{% endblock header %}
+
+{% block content %}
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xxl-8">
+        <article>
+          <h1 class="text-center">{{ section.title }}</h1>
+          <div>{{ section.content | safe }}</div>
+          <div class="card-list">
+            {% for page in section.pages %}
+              <div class="card my-3">
+                <div class="card-body">
+                  <a class="stretched-link" href="{{ page.permalink }}">{{ page.title }} &rarr;</a>
+                </div>
+              </div>
+            {% endfor %}
+            {% for s in section.subsections %}
+              {% set subsection = get_section(path=s) %}
+              <div class="card my-3">
+                <div class="card-body">
+                  <a class="stretched-link" href="{{ subsection.permalink }}">{{ subsection.title }} &rarr;</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

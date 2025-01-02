@@ -1,0 +1,113 @@
+{% macro docs_navigation(page) %}
+<div class="docs-navigation d-flex justify-content-between">
+  {# Find lower navigation. There are three types: #}
+  {# 1. directly find the lower if exists, #}
+  {# 2. if first `page.extra.top` is true because this is the first subsection #}
+  {#    a. find the last page in the parent section, or #}
+  {#    b. find the parent section #}
+  {# 3. find the last page in the previous sibling section. #}
+  {% if page.lower %}
+  <a href="{{ page.lower.permalink }}">
+    <div class="card my-1">
+      <div class="card-body py-2">
+        &larr; {{ page.lower.title }}
+      </div>
+    </div>
+  </a>
+  {% elif page.extra.top %}
+    {% set index = get_section(path=page.ancestors | last) %}
+    {% set parent = get_section(path=index.ancestors | last)%}
+    {% set first_subsection = get_section(path=parent.subsections | first) %}
+    {% if index == first_subsection %}
+      {% if parent.pages %}
+        {% set last_page = parent.pages | last %}
+      {% else %}
+        {% set last_page = parent %}
+      {% endif %}
+        <a href="{{ last_page.permalink }}">
+          <div class="card my-1">
+            <div class="card-body py-2">
+              &larr; {{ last_page.title }}
+            </div>
+          </div>
+        </a>
+    {% else %}
+      {% for s in parent.subsections | reverse %}
+        {% set subsection = get_section(path=s) %}
+        {% if subsection.permalink == index.permalink %}
+          {% set_global found_current = true %}
+        {% else %}
+          {% if found_current %}
+            {% if subsection.pages %}
+              {% set last_page = subsection.pages | last %}
+              <a href="{{ last_page.permalink }}">
+                <div class="card my-1">
+                  <div class="card-body py-2">
+                    &larr; {{ last_page.title }}
+                  </div>
+                </div>
+              </a>
+            {% endif %}
+            {# no break #}
+            {% set_global found_current = false %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+
+  {# Find higher navigation. There are also three types: #}
+  {# 1. directly find the higher page if exists, #}
+  {# 2. find the first page in the parent subsection, or the parent, and #}
+  {# 3. find the first page in the next sibling section. #}
+  {% if page.higher %}
+    <a class="ms-auto" href="{{ page.higher.permalink }}">
+      <div class="card my-1">
+        <div class="card-body py-2">
+          {{ page.higher.title }} &rarr;
+        </div>
+      </div>
+    </a>
+  {% elif page.extra.top %}
+    {% set root_section_path = page.ancestors | nth(n=1) %}
+    {% set index = get_section(path=root_section_path) %}
+    {% set first_subsection = get_section(path=index.subsections | first) %}
+    {#% if first_subsection.pages %#}
+      {#% set first_page = first_subsection.pages | first %#}
+    {#% else %#}
+      {% set first_page = index %}
+    {#% endif %#}
+      <a class="ms-auto" href="{{ first_page.permalink }}">
+        <div class="card my-1">
+          <div class="card-body py-2">
+            {{ first_page.title }} &rarr;
+          </div>
+        </div>
+      </a>
+  {% else %}
+    {% set index = get_section(path=page.ancestors | last) %}
+    {% set parent = get_section(path=index.ancestors | last) %}
+    {% if parent.subsections %}{% for s in parent.subsections %}
+      {% set subsection = get_section(path=s) %}
+      {% if subsection.permalink == index.permalink %}
+        {% set_global found_current = true %}
+      {% else %}
+        {% if found_current %}
+          {% if subsection.pages %}
+          {% set first_page = subsection.pages | first %}
+          <a class="ms-auto" href="{{ first_page.permalink }}">
+            <div class="card my-1">
+              <div class="card-body py-2">
+                {{ first_page.title }} &rarr;
+              </div>
+            </div>
+          </a>
+          {% endif %}
+          {# no break #}
+          {% set_global found_current = false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}{% endif %}
+  {% endif %}
+</div>
+{% endmacro %}

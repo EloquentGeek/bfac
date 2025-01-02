@@ -1,6 +1,6 @@
 +++
 title = "Introduction"
-description = "So there's this Bevy thing that can move pixels around on the screen..."
+description = "<em>So there's this Bevy thing that can move pixels around on the screen...</em>"
 date = 2025-01-02
 updated = 2025-01-02
 draft = false
@@ -37,6 +37,6 @@ print resources.
 Finally, it's not an official project or document of the [Bevy
 Foundation](https://bevyengine.org/foundation/) in any way.
 
-## The project
+## The game
 
 This book is also a record of the development of a 2D Bevy game, [All the Way Home](https://github.com/eloquentgeek/all-the-way-home). It's a take on the Lemmings tradition. I regret never learning [68000 assembler](https://en.wikipedia.org/wiki/Motorola_68000), so this is my attempt to recapture the Amiga 500 glory days of my youth.

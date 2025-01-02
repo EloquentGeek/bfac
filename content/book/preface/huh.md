@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = "Why does this book exist, exactly?"
+lead = "<em>Why does this book exist, exactly?</em>"
 toc = true
 top = false
 +++

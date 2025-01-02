@@ -11,3 +11,5 @@ cloning this repo and:
 ```shell
 zola serve
 ```
+
+A PDF export of this book will be made available soon.

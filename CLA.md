@@ -4,7 +4,7 @@ terms below from each Contributor. This agreement is for your protection as a Co
 the protection of Eloquent Geek and its community. It does not change your rights to use your own
 Contributions for any other purpose.
 
-During the pull request process when making your first contribution, you will be asked to indicate
+During the pull request process when making your first Contribution, you will be asked to indicate
 your agreement with the license terms below. An automated process will record your agreement.
 
 Read this document carefully before agreeing to it and keep a copy for your records.

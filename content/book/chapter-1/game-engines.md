@@ -17,7 +17,7 @@ top = false
 ## What's a game engine?
 
 Honestly, when I started learning about games I thought I knew what a game engine was. Something
-that gave me a higher-level [API]() to draw graphics and play sounds, maybe some input handling. I
+that gave me a higher-level [API](https://en.wikipedia.org/wiki/API) to draw graphics and play sounds, maybe some input handling. I
 knew some of them provided an ability to distribute games cross-platform (develop on Linux, deploy
 everywhere) and some supported drag-and-drop or point-and-click development.
 

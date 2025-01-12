@@ -40,3 +40,14 @@ Turns out, engines evolved since then. The majors encompass one or more of the f
 - distribution pipelines for various platforms, including mobile devices
 
 And the list goes on.
+
+There are [plenty of game engines](https://enginesdatabase.com) available, including at least one
+for most major platforms and languages. If you ask most people in and around the community, they'll
+recognise at least one of the following.
+
+## Unity
+
+One of the most popular engines, [Unity](https://unity.com) is wildly popular in both professional
+and amateur gamedev communities. A core strength is cross-platform distribution, including reliable
+support for mobile devices. Development language is C#. A [wildly-unpopular licensing agreement](https://en.wikipedia.org/wiki/Uniy_(game_engine)#Runtime_fee_reception) was
+modified in late 2024.

@@ -49,7 +49,7 @@ vibes.
 
 ## Unity
 
-One of the most popular engines, [Unity](https://unity.com) is wildly popular in both professional
+One of the better-known engines, [Unity](https://unity.com) is wildly popular in both professional
 and amateur gamedev communities. A core strength is cross-platform distribution, including reliable
 support for mobile devices. Development language is C#. A [wildly-unpopular licensing agreement](https://en.wikipedia.org/wiki/Uniy_(game_engine)#Runtime_fee_reception) was
 modified in late 2024.

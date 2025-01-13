@@ -43,7 +43,9 @@ And the list goes on.
 
 There are [plenty of game engines](https://enginesdatabase.com) available, including at least one
 for most major platforms and languages. If you ask most people in and around the community, they'll
-recognise at least one of the following.
+recognise at least one of the following. You should also check [PirateSoftware's gamedev
+site](https://develop.games) for a ton of relevant background information and just general good
+vibes.
 
 ## Unity
 
@@ -51,3 +53,26 @@ One of the most popular engines, [Unity](https://unity.com) is wildly popular in
 and amateur gamedev communities. A core strength is cross-platform distribution, including reliable
 support for mobile devices. Development language is C#. A [wildly-unpopular licensing agreement](https://en.wikipedia.org/wiki/Uniy_(game_engine)#Runtime_fee_reception) was
 modified in late 2024.
+
+## Unreal Engine
+
+The 3D specialist. While many other engines make 3D games possible, Unreal is one of the first tools
+triple-A teams reach for. It's relatively easy to hire for, since most 3D developers have at least
+some C++ background, and it provides the various art and asset pipelines needed by those teams. It
+also has quite a friendly model for smaller gamedevs: if your title earns less than one million,
+there's no license fee.
+
+## Godot
+
+Don't ask me how to pronounce it. I'm fairly convinced its own community doesn't know. However,
+Godot is rapidly becoming a player in the 2D and 3D worlds, having a strong indie following and more
+than a few commercial studios using it. It provides GDScript, a Python-like language, and games can
+also be written in C#. Plugins are authored largely as C++ modules. Definitely a strong choice if
+you're a fan of the open source model.
+
+## GameMaker
+
+An unassuming yet surprisingly capable player, especially in the 2D world. It provides GML, a
+JavaScript-like language which is used with a variety of point-and-click mechanisms to build games.
+It has a relatively friendly licensing structure (free to use initially, with a $100 USD lifetime
+license option). There's a wide community of indie users, and plenty of YouTube tutorials.
